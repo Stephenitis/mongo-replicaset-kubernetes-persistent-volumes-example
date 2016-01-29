@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: mongo
+  name: mongo-svca
+spec:
+  ports:
+    - port: 27017
+      targetPort: 27017
+  selector:
+    type: mongo-rs-a
+  type: "NodePort"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: mongo
+  name: mongo-svcb
+spec:
+  ports:
+    - port: 27017
+      targetPort: 27017
+  selector:
+    type: mongo-rs-b
+  type: "NodePort"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: mongo
+  name: mongo-svcc
+spec:
+  ports:
+    - port: 27017
+      targetPort: 27017
+  selector:
+    type: mongo-rs-c
+  type: "NodePort"
+---

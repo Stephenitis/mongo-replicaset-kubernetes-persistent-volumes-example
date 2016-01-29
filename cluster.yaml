@@ -1,0 +1,8 @@
+clusterName: k8s-mongo
+keyName: <>
+region: us-east-1
+availabilityZone: us-east-1a
+externalDNSName: k8s-master
+controllerInstanceType: m3.medium
+workerCount: 4
+workerInstanceType: m3.medium
